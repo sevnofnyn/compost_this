@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A searchable app for compostable materials">
+    <meta name="keywords" content="compost, vermicomposting, backyard composting, curbside composting">
+    <meta name="author" content="Kim Hayden">
+    <title>Can I Compost This?</title>
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--<script src="/node_modules/angular/angular.js"></script>-->
+</head>
+<body>
+
+
+<div class="container center-block">
+
+    <div class="row">
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h1>Can I Compost This?</h1></div>
+        <div class="panel-body">
+
+
+<h2>What do you want to compost? (spelling counts!)</h2>
+
+<form action="/" method="post">
+    <div class="item">
+        <label for="item">Enter Item</label>
+        <input type="item" name="item" id="item" placeholder="ex. apple">
+        <a href="#" class="btn btn-success">Ask!</a>
+    </div>
+</form>
+    <!--<div>-->
+        <!--<div class="pull-right">-->
+            <!--<a href="#" class="btn btn-success">Ask!</a>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+
+        </div>
+        <p> The Response would look something like this:</p>
+        <h3> Apple:</h3>
+        <ul class="center" id="index">
+            <li><img src="images/red-wigglersSM.jpg" alt="Yes for the worm bin" class="moveleft"/ ></li>
+            <li><img src="images/Composter.jpg" alt="Yes for backyard bin" /></li>
+            <li><img src="images/greencart.jpg" alt="Yes for the curbside collection" /></li>
+
+        </ul>
+        <p>with added note here if necessary</p>
+
+        <h3>Cat poop:</h3>
+        <ul class="center" id="index">
+            <li><img src="images/smallNO.png" alt="No, this should not be composted." class="moveleft" /></li>
+
+        </ul>
+        <p> with an explanation here if necessary</p>
+        <nav>
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="/about">About</a></li>
+                <li><a href="/links">Links</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+    </div>
+</div>
+
+<!--<footer>Legend: worm picture= worm bin, backyard bin picture= can go in backyard, curbside container= can/should go in curbside, NO! =Do not compost</footer>-->
+<!--</body>-->
+</html>

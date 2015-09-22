@@ -1,0 +1,122 @@
+body {
+  padding: 50px 0 50px 0;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.panel-default > .panel-heading {
+  font: 24px Helvetica, sans-serif;
+  color: whitesmoke;
+  background-color: darkgreen;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2{
+  font: 24px Helvetica, sans-serif;
+  color: darkgreen;
+}
+
+h3 {
+    color: darkgreen;
+}
+
+a {
+  color: forestgreen;
+   text-decoration: none;
+}
+
+ .center-block {
+   width: 400px;
+ }
+
+ .item {padding-bottom: 20px;
+ }
+
+.panel > .panel-footer{
+  background-color: darkgreen;
+
+}
+
+h3{
+  margin: 0 25px 10px 25px;
+}
+
+p{
+  margin:0 25px 10px 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+#index li {
+    display: inline-block;
+    text-align: center;
+}
+
+.nav {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+    background-color: darkgreen;
+    padding: 15px;
+}
+
+.nav-pills a {
+    color: whitesmoke;
+}
+
+.form {
+    background-color: white;
+    border: none;
+}
+
+.nav > li > a:hover{
+    background-color:forestgreen;
+}
+
+.btn-success{
+    background-color: forestgreen;
+}
+
+.moveleft{
+    margin-left: -50px;
+}
+
+#resources li{
+    text-align: left;
+    list-style-type: none;
+
+}
+#what li{
+
+    list-style-type: none;
+    display: inline-block;
+
+
+}
+
+/*.picwidth{*/
+   /*margin-left: 100px;*/
+/*}*/
+
+/*This css is for the description of the symbols on the about page*/
+
+#symbols{
+    width: 100%;
+}
+#left{
+    width:110px;
+float:left;
+}
+#splitter{
+    width:10px;
+float:left;
+}
+#right{
+
+float:left;
+    display:inline-block;
+    vertical-align:middle;
+}
