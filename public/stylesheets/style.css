@@ -1,40 +1,44 @@
 body {
   padding: 0 0 50px 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
 }
+
 h1{
     font: 72px Roboto, sans-serif;
 }
+h2{
+    font: 24px "Roboto", sans-serif;
+    color: darkgreen;
+}
 
+h3 {
+    color: darkgreen;
+}
+
+
+.panel {
+    border: none;
+    box-shadow: none;
+}
 .panel-body{
     margin-left: 100px;
-
-
 }
+
 .panel-heading {
     background-image: url("/images/header.jpg");
-
 }
+
 .panel-default > .panel-heading {
   font: 24px Helvetica, sans-serif;
   color: whitesmoke;
   background-color: darkgreen;
   text-align: left;
   font-weight: bold;
-
+    /*/!*border-bottom-style:none*!/ does not work*/
 }
 
-h2{
-  font: 24px "Roboto", sans-serif;
-  color: darkgreen;
-}
 
-h3 {
-    color: darkgreen;
-    /*margin: 0 25px 10px 0px;*/
-    /*}*/
-}
+
 a {
   color: forestgreen;
    text-decoration: none;
@@ -56,7 +60,7 @@ a {
 
 .panel > .panel-footer{
   background-color: darkgreen;
-
+    border-bottom-style:none
 }
 
 
@@ -67,13 +71,12 @@ p{
 
 .center {
     text-align: center;
-
     }
-
 
 #indexPic li {
     display: inline-block;
     text-align: center;
+    margin-left: 75px;
 }
 
 .nav {
@@ -91,6 +94,11 @@ p{
     color: whitesmoke;
 }
 
+/*This doesn't get rid of the bottom margin although if I put in 10 it does raise it up 10px*/
+.navbar-fixed-bottom{
+    margin-bottom: 0px;
+}
+
 .form {
     background-color: white;
     border: none;
@@ -101,7 +109,7 @@ p{
 }
 
 .nav > li > a:hover{
-    background-color:forestgreen;
+    background-color:darkgreen;
 }
 
 .btn-success{
@@ -116,7 +124,6 @@ p{
 .movemoreleft {
     margin-left:-200px;
 }
-
 
 #resources li{
     text-align: left;
@@ -154,9 +161,4 @@ figure
 .center1 {
     margin-left: 17%;
 }
-/*.picwidth{*/
-   /*margin-left: 100px;*/
-/*}*/
 
-
-}
