@@ -1,24 +1,22 @@
-//
-//
-////changed this from cats stuff to compost stuff
-//
-//
-//var app = angular.module('app', []);
-//app.controller("AskController", ['$scope', '$http', function($scope, $http){
-//    $scope.compost = {};
-//    $scope.composts = [];
-//    var fetchCompost = function() {
-//        return $http.get('/compost').then(function(response){
-//            if(response.status !== 200){
-//                throw new Error('Failed to fetch compost from the API');
-//            }
-//            $scope.compost = {};
-//            $scope.composts = response.data;
-//            return response.data;
-//        })
-//    };
-//    $scope.add = function(compost){
-//        return $http.post('/add', compost).then(fetchCompost);
-//    };
-//    fetchCompost();
-//}]);
+
+////changed this from cats stuff to item stuff
+
+var app = angular.module('app', []);
+app.controller("itemController", ['$scope', '$http', function($scope, $http){
+    $scope.item = {};
+    $scope.items = [];
+    var fetchItem = function() {
+        return $http.get('/index').then(function(response){
+            if(response.status !== 200){
+                throw new Error('Failed to fetch item from the API');
+            }
+            $scope.item = {};
+            $scope.items = response.data;
+            return response.data;
+        })
+    };
+    $scope.add = function(item){
+        return $http.post('/add', item).then(fetchItem);
+    };
+    fetchItem();
+}]);
