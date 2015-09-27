@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var sendmail = require('sendmail')();
+
+
 
 var routes = require('./routes/index');
 //var users = require('./routes/users');
@@ -36,6 +39,24 @@ app.use('/', index);
 app.use('/about', about);
 app.use('/links', links);
 app.use('/contact', contact);
+
+//stubbed my Joel
+//look up Angular $http post
+app.post('sendEmail', function(req, res){
+  //send the email via sendmail
+
+  var formData = req.body.form;
+
+  sendmail({
+    from: 'no-reply@yourdomain.com',
+    to: 'test@qq.com, test@sohu.com, test@163.com ',
+    subject: 'test sendmail',
+    content: 'Mail of test sendmail ',
+  }, function(err, reply) {
+    console.log(err && err.stack);
+    console.dir(reply);
+  });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
