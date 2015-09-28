@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js" type="text/javascript"></script>
 
-    <script src="javascripts/app.js"></script>
+    <script src="javascripts/app.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <!--<script src="/node_modules/angular/angular.js"></script>-->
@@ -22,39 +22,40 @@
 <div class="container col-md-12">
 
     <div class="row">
-
-
     <div class="panel panel-default center">
         <div class="panel-heading"><h1>Can I Compost This?</h1></div>
         <div class="panel-body">
 
 
-<h2>What do you want to compost?</h2>
+<h2 class="col-md-6 col-md-offset-3">What do you want to compost?</h2>
 
 <!--<form>-->
-    <div class="item">
-        <label for="item">Enter Item</label>
-        <input type="item" name="item" id="item" placeholder="ex. apple" ng-model="item.name">
-        <input type="submit" ng-click="add()" value="Ask!" class="btn btn-success">
-    </div>
+    <form class="col-md-6 col-md-offset-3" ng-submit="add()">
+        <label for="searchTerm">Enter Item</label>
+        <input type="text" name="searchTerm" id="searchTerm" placeholder="ex. apple" ng-model="searchTerm.name">
+        <input type="submit" value="Ask!" class="btn btn-success">
+    </form>
 <!--</form>-->
         </div>
 
-        <div ng-view ng-repeat="item in items"><h2>{{item.name}}</h2></div>
-        <ul class="center" id="indexPic">
+        <div ng-repeat="item in items"  class="col-md-5 col-md-offset-4"><h2>{{item.item}}</h2>
+
+
+            <p  class="search">{{item.AddedNotes}}</p>
+            <p>{{item.CN}}</p>
+            <p>{{item.code}}</p>
+        </div>
+        <div>
+        <p ng-show="showContact" class="search col-md-5 col-md-offset-4">Oops, it looks like either you misspelled an item, or it is not in the database. Please use the <a href="/contact">contact</a> form to let us know.</p>
+        </div>
+       <div class="search col-md-5 col-md-offset-4">
+        <ul class="center-block" id="indexPic">
             <li><img src="images/red-wigglersSM.jpg" alt="Yes for the worm bin" class="moveleft" /></li>
             <li><img src="images/Composter.jpg" alt="Yes for backyard bin" /></li>
             <li><img src="images/greencart.jpg" alt="Yes for the curbside collection" /></li>
 
         </ul>
-        <p>with added note here if necessary</p>
-
-        <h2>{{item.name}}</h2>
-        </div>
-        <ul class="center" id="indexPic2">
-            <li><img src="images/smallNO.png" alt="No, this should not be composted." class="moveleft" /></li>
-            <p> with an explanation here if necessary</p>
-        </ul>
+       </div>
 
         <nav class="navbar-fixed-bottom">
             <ul class="nav nav-pills nav-justified">
@@ -66,6 +67,5 @@
     </div>
     </div>
 </div>
-<!--<script src="/javascripts/app.js" type="text/javascript"></script>-->
 </body>
 </html>

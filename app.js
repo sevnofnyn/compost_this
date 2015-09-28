@@ -18,11 +18,11 @@ var users = require('./routes/users');
 var about = require('./routes/about');
 var links = require('./routes/links');
 var contact = require('./routes/contact');
-
+var search= require('./routes/search');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
+app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -39,6 +39,7 @@ app.use('/', index);
 app.use('/about', about);
 app.use('/links', links);
 app.use('/contact', contact);
+app.use('/search', search);
 
 //stubbed my Joel
 //look up Angular $http post
@@ -49,9 +50,9 @@ app.post('sendEmail', function(req, res){
 
   sendmail({
     from: 'no-reply@yourdomain.com',
-    to: 'test@qq.com, test@sohu.com, test@163.com ',
+    to: 'homebrew72@hotmail.com',
     subject: 'test sendmail',
-    content: 'Mail of test sendmail ',
+    content: 'Mail of test sendmail '
   }, function(err, reply) {
     console.log(err && err.stack);
     console.dir(reply);
@@ -71,8 +72,9 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
+    console.log(err);
     res.status(err.status || 500);
-    res.render('error', {
+    res.send({
       message: err.message,
       error: err
     });
@@ -82,8 +84,9 @@ if (app.get('env') === 'development') {
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
+  console.log(err);
   res.status(err.status || 500);
-  res.render('error', {
+  res.send({
     message: err.message,
     error: {}
   });

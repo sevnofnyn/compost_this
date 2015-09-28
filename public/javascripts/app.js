@@ -4,21 +4,21 @@
 var app = angular.module('myApp', []);
 
 
-// create the controller and inject Angular's $scope
-app.controller('mainController', function($scope) {
-
-    $scope.item = {};
-    $scope.items = [];
-
-    // create a message to display in our view
-    $scope.message = 'I think I can. I think I can' + item.name;
-
-    $scope.add = function(){
-        alert($scope.item.name);
-        $scope.items.push($scope.item);
-        $scope.item = {};
-    };
-});
+//// create the controller and inject Angular's $scope
+//app.controller('mainController', function($scope) {
+//
+//    $scope.item = {};
+//    $scope.items = [];
+//
+//    // create a message to display in our view
+//    $scope.message = 'I think I can. I think I can' + item.name;
+//
+//    $scope.add = function(){
+//        alert($scope.item.name);
+//        $scope.items.push($scope.item);
+//        $scope.item = {};
+//    };
+//});
 //contactController
 
 app.controller('contactController', function($scope) {
@@ -34,3 +34,31 @@ app.controller('contactController', function($scope) {
         //$http('/sendEmail', form)
     };
 });
+
+//This is for the search.js file //
+
+//$scope.items = {};
+
+
+    app.controller('mainController', function($scope, $http) {
+
+        $scope.items = [];
+        $scope.showContact = false;
+        $scope.add = function() {
+console.log($scope);
+            // Get all items
+            $http.post('/search', $scope.searchTerm)
+                .success(function (data) {
+                    $scope.items = data;
+                    if ($scope.items.length ===0){
+                        $scope.showContact = true;
+                    } else {
+                        $scope.showContact = false;
+                    }
+                    console.log(data);
+                })
+                .error(function (response) {
+                    console.log('Error: ' + response.message);
+                });
+        };
+    });
