@@ -37,18 +37,7 @@ h3 {
   font-weight: bold;
     /*/!*border-bottom-style:none*!/ does not work*/
 }
-.accordion{
-    margin-top: 100px;
-    margin-left: -40px;
-    background-color: white;
-    text-align: left;
-}
-.accordion-panel{
-    display: none;
-    background-color: white;
-    text-align: left;
 
-}
 
 a {
   color: forestgreen;
@@ -159,10 +148,12 @@ figure
     margin:20px;
     text-align:left;
     padding:20px 40px 0 0;
+    font-size: 18px;
 }
 
 .figure-caption {
     padding-top: 40px;
+    /*font-size: 20px;*/
 }
 
 .figure-caption1 {
@@ -174,5 +165,46 @@ figure
 }
 
 .search{
-    text-align: justify;
+    text-align: center;
+}
+
+.accordion{
+
+    margin-left: -40px;
+    background-color: white;
+
+}
+.accordion-panel{
+    display: none;
+}
+
+.accordion li {
+    padding: 0;
+    list-style-type: none;
+}
+
+.accordion-control {
+    background-color: white;
+    color: #fff;
+    display: block;
+    width: 100%;
+    padding: 0.5em 0.5em 0.5em 40%;
+    margin: 0;
+    border-top: 1px solid forestgreen;
+    text-align: left;
+}
+
+.accordion p{
+    font-size: 20px;
+    padding-left: 30%;
+    padding-right: 30%;
+
+}
+
+.content-bottom{
+    padding-bottom: 50px;
+}
+
+.content-top{
+    padding-top: 125px;
 }

@@ -18,7 +18,7 @@ router.post('/', function(req, res, next){
             next(err);
         } else {
             // SQL Query > Select Data
-            var query = client.query("SELECT * FROM item WHERE item = $1", [data.text]);
+            var query = client.query('SELECT * FROM item WHERE lower(item) LIKE lower($1)', [data.text]);
 
             // Stream results back one row at a time
             query.on('row', function (row) {
@@ -28,7 +28,7 @@ router.post('/', function(req, res, next){
             // After all data is returned, close connection and return results
             query.on('end', function () {
                 client.end();
-                console.log('banana', results);
+                //console.log('banana', results);
                 return res.json(results);
 
             });

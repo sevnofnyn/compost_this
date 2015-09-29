@@ -55,6 +55,16 @@ console.log($scope);
                     } else {
                         $scope.showContact = false;
                     }
+                //})
+                //    if ($scope.items.CN ===C{
+                //        $scope.showContact = Carbon;
+                //    }
+                //        else{
+                //        ($scope.items.CN ===N
+                //        {
+                //            $scope.showContact = Nitrogen;
+                //        }
+
                     console.log(data);
                 })
                 .error(function (response) {
