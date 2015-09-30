@@ -1,6 +1,6 @@
 body {
   padding: 0 0 50px 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1{
@@ -21,7 +21,7 @@ h3 {
     box-shadow: none;
 }
 .panel-body{
-    margin-left: 100px;
+    margin-top: 100px;
 }
 
 .panel-heading {
@@ -30,12 +30,11 @@ h3 {
 }
 
 .panel-default > .panel-heading {
-  font: 24px Helvetica, sans-serif;
-  color: whitesmoke;
-  background-color: darkgreen;
-  text-align: left;
-  font-weight: bold;
-    /*/!*border-bottom-style:none*!/ does not work*/
+    font: 24px Helvetica, sans-serif;
+    color: whitesmoke;
+    background-color: darkgreen;
+    text-align: left;
+    font-weight: bold;
 }
 
 
@@ -54,13 +53,12 @@ a {
     text-decoration: none;
 }
 
-
  .item {padding-bottom: 20px;
  }
 
 .panel > .panel-footer{
   background-color: darkgreen;
-    border-bottom-style:none
+    border-bottom-style: none;
 }
 
 
@@ -76,9 +74,9 @@ p{
 #indexPic li {
     display: inline-block;
     /*text-align: center;*/
-    margin-left: 75px;
+    margin-left: 40px;
 }
-
+/*Adjust padding on the bottom to 15 to fix the margin-bottom problem in navbar-fixed-bottom*/
 .nav {
     display: inline-block;
     text-align: center;
@@ -87,16 +85,18 @@ p{
     letter-spacing: 2px;
     color: whitesmoke;
     background-color: #4A2500;
-    padding: 10px;
+    padding: 10px 10px 15px 10px;
 }
+
+
 
 .nav-pills a {
     color: whitesmoke;
 }
 
-/*This doesn't get rid of the bottom margin although if I put in 10 it does raise it up 10px*/
+/*To get rid of white line below the nav bar set to negative margin*/
 .navbar-fixed-bottom{
-    margin-bottom: 0px;
+    margin-bottom: -10px;
 }
 
 .form {
@@ -112,10 +112,22 @@ p{
     background-color:darkgreen;
 }
 
+
 .btn-success{
     background-color: forestgreen;
-    /*margin-top: 25px;*/
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
+button:active,
+button:focus,
+button.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 
 .moveleft{
     margin-left: -50px;
@@ -148,7 +160,7 @@ figure
     margin:20px;
     text-align:left;
     padding:20px 40px 0 0;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .figure-caption {
@@ -166,23 +178,35 @@ figure
 
 .search{
     text-align: center;
+
 }
 
+.searchitem{
+    text-align: justify;
+}
 .accordion{
-
-    margin-left: -40px;
     background-color: white;
-
+    margin: 50px auto;
 }
 .accordion-panel{
     display: none;
 }
 
 .accordion li {
-    padding: 0;
+    padding: 50px 0 25px 0px;
     list-style-type: none;
+
 }
 
+li .accordion-panel p:first-of-type {
+    margin-top: 50px;
+    padding-top: 50px;
+
+}
+
+li .accordion-panel p:last-of-type {
+    /*margin-bottom: 25px;*/
+}
 .accordion-control {
     background-color: white;
     color: #fff;
@@ -191,6 +215,9 @@ figure
     padding: 0.5em 0.5em 0.5em 40%;
     margin: 0;
     border-top: 1px solid forestgreen;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.5px solid forestgreen;
     text-align: left;
 }
 
@@ -198,13 +225,6 @@ figure
     font-size: 20px;
     padding-left: 30%;
     padding-right: 30%;
-
 }
 
-.content-bottom{
-    padding-bottom: 50px;
-}
 
-.content-top{
-    padding-top: 125px;
-}

@@ -2,6 +2,7 @@
 <html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Can I Compost This? </title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -18,21 +19,20 @@
     <div class="panel panel-default">
         <div class="panel-heading"><h1>Contact</h1></div>
         <div class="panel-body">
-            <!--<form class="contact-form">-->
-                <!--<form class="form-horizontal" role="form">-->
-                    <div class="form-group" name="contactForm">
+            <h2 class="col-md-6 col-md-offset-3">Contact Can I Compost This?</h2>
+                    <div class="form-group col-md-6 col-md-offset-3" name="contactForm">
                         <label for="name">Name: </label>
                             <input type="text" class="form-control" id="name" placeholder="Name" ng-model="form.name" ng-pattern="/^[a-zA-Z]*$/" required>
                         <span ng-show="contactForm.name.$error.required">A name is required!</span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-6 col-md-offset-3">
                         <label for="email">Email: </label>
                             <input type="email" class="form-control" id="email" placeholder="Email" ng-model="form.email" required>
                         <!--<span ng-show="contactForm.emailAddress.$error.pattern">Not a valid email address!</span>-->
                         <span ng-show="contactForm.emailAddress.$error.required">Email address is required!</span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6 col-md-offset-3">
                             <label for="subject">Subject: </label>
                             <div>
                                 <select ng-model="form.problem" id="subject" name="subject">
@@ -44,12 +44,12 @@
                             </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6 col-md-offset-3">
                             <label for="message">Message: </label>
                             <textarea ng-model="form.message" class="form-control" id="message" placeholder="Message"></textarea>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-md-6 col-md-offset-3">
                         <div class="col-md-12">
                             <!--{{form}}-->
 
@@ -68,7 +68,7 @@
     </div>
 </div>
 </div>
-</div>
+
 
 </body>
 </html>

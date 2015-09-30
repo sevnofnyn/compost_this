@@ -4,21 +4,6 @@
 var app = angular.module('myApp', []);
 
 
-//// create the controller and inject Angular's $scope
-//app.controller('mainController', function($scope) {
-//
-//    $scope.item = {};
-//    $scope.items = [];
-//
-//    // create a message to display in our view
-//    $scope.message = 'I think I can. I think I can' + item.name;
-//
-//    $scope.add = function(){
-//        alert($scope.item.name);
-//        $scope.items.push($scope.item);
-//        $scope.item = {};
-//    };
-//});
 //contactController
 
 app.controller('contactController', function($scope) {
@@ -55,15 +40,6 @@ console.log($scope);
                     } else {
                         $scope.showContact = false;
                     }
-                //})
-                //    if ($scope.items.CN ===C{
-                //        $scope.showContact = Carbon;
-                //    }
-                //        else{
-                //        ($scope.items.CN ===N
-                //        {
-                //            $scope.showContact = Nitrogen;
-                //        }
 
                     console.log(data);
                 })
