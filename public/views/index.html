@@ -28,8 +28,16 @@
 
 
     <form class="col-md-7 col-md-offset-4" ng-submit="add()">
+        <datalist id="searchTerm">
+            <option value="Apple"/>
+            <option value="Cherry"/>
+            <option value="Lemon"/>
+            <option value="Orange"/>
+            <option value="Peach"/>
+            <option value="Strawberry"/>
+        </datalist>
         <label for="searchTerm">Enter Item </label>
-        <input type="text" name="searchTerm" id="searchTerm" placeholder="ex. apple" ng-model="searchTerm.name">
+        <input type="text" name="searchTerm" list="searchTerm" id="searchTerm" placeholder="ex. apple" ng-model="searchTerm.name">
         <input type="submit" value="Ask!" class="btn btn-success">
     </form>
 
@@ -38,21 +46,71 @@
         <div ng-repeat="item in items" class="search col-md-5 col-md-offset-3"><h2>{{item.item}}</h2>
 
 
-            <p class="searchitem">{{item.AddedNotes}}</p>
+            <p class="search">{{item.AddedNotes}}</p>
             <h3>Adds: <small>{{item.CN}}</small></h3>
             <p>{{item.code}}</p>
         </div>
         <div>
         <p ng-show="showContact" class="search col-md-5 col-md-offset-3">Oops, it looks like either you misspelled an item, or it is not in the database. Please use the <a href="/contact">contact</a> form to let us know.</p>
         </div>
-       <div class="col-md-5 col-md-offset-3">
+        <!-- Code 0- Items for worm, backyard, and curbside composting-->
+       <div class="col-md-5 col-md-offset-3" ng-show="show0">
         <ul class="center-block" id="indexPic">
             <li><img src="images/red-wigglersSMind.jpg" alt="Yes for the worm bin" class="moveleft" /></li>
             <li><img src="images/ComposterSMind.jpg" alt="Yes for backyard bin" /></li>
             <li><img src="images/greencartSMind.jpg" alt="Yes for the curbside collection" /></li>
-
         </ul>
        </div>
+
+        <!-- Code 1- Items for backyard, and curbside composting-->
+        <div class="col-md-5 col-md-offset-3" ng-show="show1">
+            <ul class="center-block" id="indexPic">
+                <!--<li><img src="images/red-wigglersSMind.jpg" alt="Yes for the worm bin" class="moveleft" /></li>-->
+                <li><img src="images/ComposterSMind.jpg" alt="Yes for backyard bin" /></li>
+                <li><img src="images/greencartSMind.jpg" alt="Yes for the curbside collection" /></li>
+            </ul>
+        </div>
+
+        <!-- Code 2- Items for backyard composting-->
+        <div class="col-md-6 col-md-offset-4" id="show2" ng-show="show2">
+            <ul class="center-block" id="indexPic">
+                <!--<li><img src="images/red-wigglersSMind.jpg" alt="Yes for the worm bin" class="moveleft" /></li>-->
+                <li><img src="images/ComposterSMind.jpg" alt="Yes for backyard bin" /></li>
+                <!--<li><img src="images/greencartSMind.jpg" alt="Yes for the curbside collection" /></li>-->
+            </ul>
+        </div>
+
+        <!-- Code 3- Items for  and curbside composting-->
+        <div class="col-md-6 col-md-offset-4" ng-show="show3">
+            <ul class="center-block" id="indexPic">
+                <!--<li><img src="images/red-wigglersSMind.jpg" alt="Yes for the worm bin" class="moveleft" /></li>-->
+                <!--<li><img src="images/ComposterSMind.jpg" alt="Yes for backyard bin" /></li>-->
+                <li><img src="images/greencartSMind.jpg" alt="Yes for the curbside collection" /></li>
+            </ul>
+        </div>
+
+        <!-- Code 4- Items for worm, and curbside composting-->
+        <div class="col-md-5 col-md-offset-3" ng-show="show4">
+            <ul class="center-block" id="indexPic">
+                <li><img src="images/red-wigglersSMind.jpg" alt="Yes for the worm bin" /></li>
+                <!--<li><img src="images/ComposterSMind.jpg" alt="Yes for backyard bin" /></li>-->
+                <li><img src="images/greencartSMind.jpg" alt="Yes for the curbside collection" /></li>
+            </ul>
+        </div>
+
+        <!-- Code 5- Items that you can maybe compost-->
+        <div class="col-md-6 col-md-offset-4" ng-show="show3">
+            <ul class="center-block" id="indexPic">
+                <li><img src="images/question-markSMind.jpg" height= "175" width=175" alt="Maybe you can compost this. See added notes" class="moveleft" /></li>
+            </ul>
+        </div>
+
+        <!-- Code 6- Items that you should NOT compost-->
+        <div class="col-md-6 col-md-offset-4" ng-show="show3">
+            <ul class="center-block" id="indexPic">
+                <li><img src="images/NOSMind.png" alt="You should not compost this. See added notes" class="moveleft"/></li>
+            </ul>
+        </div>
 
         <nav class="navbar-fixed-bottom">
             <ul class="nav nav-pills nav-justified">

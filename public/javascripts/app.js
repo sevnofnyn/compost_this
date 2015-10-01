@@ -20,9 +20,6 @@ app.controller('contactController', function($scope) {
     };
 });
 
-//This is for the search.js file //
-
-//$scope.items = {};
 
 
     app.controller('mainController', function($scope, $http) {
@@ -30,7 +27,7 @@ app.controller('contactController', function($scope) {
         $scope.items = [];
         $scope.showContact = false;
         $scope.add = function() {
-console.log($scope);
+        console.log($scope);
             // Get all items
             $http.post('/search', $scope.searchTerm)
                 .success(function (data) {
@@ -39,6 +36,45 @@ console.log($scope);
                         $scope.showContact = true;
                     } else {
                         $scope.showContact = false;
+
+                        var imgCombo = function imgCombo(img) {
+                            var combo = document.getElementById('combo');
+                            combo.innerHTML = '<img src="' + img + '"/>';
+                        };
+                        //put stuff here case statement/switch
+                        var showCombo = function (code){
+                        //var checkImg = function (img) {
+                            switch (img) {
+                                //case "Show0":
+                                //    myImg("");
+                                //    break;
+                                //case "Show1":
+                                //    myImg("");
+                                //    break;
+                                case "Show2":
+                                    myImg("images/ComposterSMind.jpg");
+                                    break;
+                                //case "Show3":
+                                //    myImg("");
+                                //    break;
+                                //case "Show4":
+                                //    myImg("");
+                                //    break;
+                                //case "Show5":
+                                //    myImg("");
+                                //    break;
+                                //case "Show6":
+                                //    myImg("");
+                                //    break;
+                                //default:
+                                //    myImg("");
+                                //    break;
+                            //}
+                        }
+                        };
+
+                    myImg()
+
                     }
 
                     console.log(data);
@@ -47,4 +83,5 @@ console.log($scope);
                     console.log('Error: ' + response.message);
                 });
         };
+
     });
