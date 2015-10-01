@@ -71,6 +71,11 @@ p{
     text-align: center;
     }
 
+.centerKey{
+    text-align: center;
+    padding-top: 50px;
+}
+
 #indexPic li {
     display: inline-block;
     /*text-align: center;*/
@@ -180,6 +185,7 @@ figure
     text-align: center;
 
 }
+
 
 .searchitem{
     text-align: justify;
