@@ -5,20 +5,20 @@ var app = angular.module('myApp', []);
 
 //contactController
 
-//app.controller('contactController', function($scope) {
+app.controller('contactController', function($scope) {
+
+    $scope.form = {};
+
+    // create a message to display in our view
+    //$scope.message = 'I think I can. I think I can' + item.name;
 //
-//    $scope.form = {};
-//
-//    // create a message to display in our view
-//    //$scope.message = 'I think I can. I think I can' + item.name;
-//
-//    $scope.contactForm = function(){
-//        var data = ({
-//            name: this.name,
-//            email: this.email,
-//            subject: this.subject,
-//            message: this.message
-//        });
+    $scope.contactForm = function(){
+        var data = ({
+            name: this.name,
+            email: this.email,
+            subject: this.subject,
+            message: this.message
+        });
 //
 //        alert('Sending the email');
 //
@@ -33,8 +33,8 @@ var app = angular.module('myApp', []);
 //        console.log($scope.form);
 
         //$http('/sendEmail', form)
-//    };
-//});
+    };
+})
 
     app.controller('mainController', function($scope, $http) {
         //{text:"Apple"}, {text:"Banana"}, {text:"Orange"}, {text:"Lemon"}
