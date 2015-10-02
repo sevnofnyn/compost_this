@@ -5,40 +5,40 @@ var app = angular.module('myApp', []);
 
 //contactController
 
-app.controller('contactController', function($scope) {
-
-    $scope.form = {};
-
-    // create a message to display in our view
-    //$scope.message = 'I think I can. I think I can' + item.name;
-
-    $scope.contactForm = function(){
-        var data = ({
-            name: this.name,
-            email: this.email,
-            subject: this.subject,
-            message: this.message
-        });
-
-        alert('Sending the email');
-
-        $http.post('/sendEmail', form).then(function(response) {
-            // provided that the `transporter.sendMail` returned a good response
-            alert('The email was sent');
-        }, function(response) {
-            // provided that the `transporter.sendMail` returned a bad response
-            alert('The email did not send');
-        });
-
-        console.log($scope.form);
+//app.controller('contactController', function($scope) {
+//
+//    $scope.form = {};
+//
+//    // create a message to display in our view
+//    //$scope.message = 'I think I can. I think I can' + item.name;
+//
+//    $scope.contactForm = function(){
+//        var data = ({
+//            name: this.name,
+//            email: this.email,
+//            subject: this.subject,
+//            message: this.message
+//        });
+//
+//        alert('Sending the email');
+//
+//        $http.post('/sendEmail', form).then(function(response) {
+//            // provided that the `transporter.sendMail` returned a good response
+//            alert('The email was sent');
+//        }, function(response) {
+//            // provided that the `transporter.sendMail` returned a bad response
+//            alert('The email did not send');
+//        });
+//
+//        console.log($scope.form);
 
         //$http('/sendEmail', form)
-    };
-});
+//    };
+//});
 
     app.controller('mainController', function($scope, $http) {
-
-        $scope.itemOptions = [{text:"Apple"}, {text:"Banana"}, {text:"Orange"}, {text:"Lemon"}];
+        //{text:"Apple"}, {text:"Banana"}, {text:"Orange"}, {text:"Lemon"}
+        $scope.items = [];
         $scope.showContact = false;
         $scope.add = function() {
         console.log($scope);
@@ -69,7 +69,7 @@ app.controller('contactController', function($scope) {
                             case 6:
                                 $scope.show6 = scopeHide;
                                 break;
-                        };
+                        }
                     };
 
                     $scope.items = data;
@@ -98,13 +98,13 @@ app.controller('contactController', function($scope) {
 
     });
 
-typeAhead.controller('searchController', function($http) {
-    return {
-        get: function(url) {
-            return $http.get(url).then(function(resp) {
-                return resp.data; // success callback returns this
-            });
-        }
-    };
+//typeAhead.controller('searchController', function($http) {
+//    return {
+//        get: function(url) {
+//            return $http.get(url).then(function(resp) {
+//                return resp.data; // success callback returns this
+//            });
+//        }
+//    };
 
-});
+//});

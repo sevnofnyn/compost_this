@@ -33,7 +33,7 @@ router.post('/', function(req, res, next){
 
             });
         }
-            var autoComplete = client.query ('SELECT item FROM item', [data.text]);
+            //var autoComplete = client.query ('SELECT item FROM item', [data.text]);
 
 
     });
