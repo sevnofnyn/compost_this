@@ -3,12 +3,12 @@
 body {
   padding: 0 0 50px 0;
   font: 14px Roboto, Helvetica, Arial, sans-serif;
-
 }
 
 h1{
     font: 72px Roboto, sans-serif;
 }
+
 h2{
     font: 30px "Roboto", sans-serif;
     color: darkgreen;
@@ -18,13 +18,13 @@ h3 {
     color: darkgreen;
 }
 
-
 .panel {
     border: none;
     box-shadow: none;
 }
+
 .panel-body{
-    margin-top: 100px;
+    margin-top: -25px;
 }
 
 .panel-heading {
@@ -40,7 +40,6 @@ h3 {
     font-weight: bold;
 }
 
-
 a {
   color: forestgreen;
    text-decoration: none;
@@ -49,6 +48,7 @@ a {
 #resources a {
     color: black;
     text-decoration: none;
+    line-height: 110%;
 }
 
 #resources a:hover {
@@ -56,7 +56,8 @@ a {
     text-decoration: none;
 }
 
- .item {padding-bottom: 20px;
+ .item {
+     padding-bottom: 20px;
  }
 
 .panel > .panel-footer{
@@ -64,9 +65,7 @@ a {
     border-bottom-style: none;
 }
 
-
-
-p{
+p {
   margin:0 25px 10px 25px;
 }
 
@@ -84,27 +83,23 @@ p{
     /*text-align: center;*/
     margin-left: 40px;
 }
-/*Adjust padding on the bottom to 15 to fix the margin-bottom problem in navbar-fixed-bottom*/
+
 .nav {
     display: inline-block;
-    text-align: center;
-    font: 30px Roboto, sans-serif;
+    font: 20px Roboto, sans-serif;
     font-weight: 300;
     letter-spacing: 2px;
-    color: whitesmoke;
-    background-color: #4A2500;
-    padding: 10px 10px 15px 10px;
+    color: #4A2500;
+    float: right;
+
 }
-
-
 
 .nav-pills a {
-    color: whitesmoke;
+    color: brown;
 }
 
-/*To get rid of white line below the nav bar set to negative margin*/
-.navbar-fixed-bottom{
-    margin-bottom: -10px;
+.nav > li > a:hover{
+    background-color:whitesmoke;
 }
 
 .form {
@@ -114,10 +109,6 @@ p{
 .form-control
 {
     width: 300px;
-}
-
-.nav > li > a:hover{
-    background-color:darkgreen;
 }
 
 .btn-success{
@@ -155,10 +146,10 @@ button.active {
     display: inline-block;
 }
 
-.copyright{
-    text-align: right;
-    color: darkgrey;
-}
+/*.copyright{*/
+    /*text-align: right;*/
+    /*color: darkgrey;*/
+/*}*/
 
 figure
 {
@@ -167,7 +158,7 @@ figure
     float:left;
     margin:20px;
     text-align:left;
-    padding:20px 40px 0 0;
+    padding:20px 20px 0 0;
     font-size: 14px;
 }
 
@@ -186,17 +177,17 @@ figure
 
 .search{
     text-align: center;
-
 }
-
 
 .searchitem{
     text-align: justify;
 }
+
 .accordion{
     background-color: white;
     margin: 50px auto;
 }
+
 .accordion-panel{
     display: none;
 }
@@ -204,18 +195,17 @@ figure
 .accordion li {
     padding: 50px 0 25px 0px;
     list-style-type: none;
-
 }
 
 li .accordion-panel p:first-of-type {
     margin-top: 50px;
     padding-top: 50px;
-
 }
 
 li .accordion-panel p:last-of-type {
-    /*margin-bottom: 25px;*/
+    margin-bottom: 25px;
 }
+
 .accordion-control {
     background-color: white;
     color: #fff;
@@ -237,3 +227,243 @@ li .accordion-panel p:last-of-type {
 }
 
 
+
+
+
+
+/*Git hub stuff to try to fix issues!!!!*/
+/*body {*/
+    /*padding: 0 0 50px 0;*/
+    /*font: 14px Roboto, Helvetica, Arial, sans-serif;*/
+
+/*}*/
+
+/*h1{*/
+    /*font: 72px Roboto, sans-serif;*/
+/*}*/
+/*h2{*/
+    /*font: 30px "Roboto", sans-serif;*/
+    /*color: darkgreen;*/
+/*}*/
+
+/*h3 {*/
+    /*color: darkgreen;*/
+/*}*/
+
+
+/*.panel {*/
+    /*border: none;*/
+    /*box-shadow: none;*/
+/*}*/
+/*.panel-body{*/
+    /*margin-top: 100px;*/
+/*}*/
+
+/*.panel-heading {*/
+    /*background-image: url("/images/header.jpg");*/
+    /*color: whitesmoke;*/
+/*}*/
+
+/*.panel-default > .panel-heading {*/
+    /*font: 24px Helvetica, sans-serif;*/
+    /*color: whitesmoke;*/
+    /*background-color: darkgreen;*/
+    /*text-align: left;*/
+    /*font-weight: bold;*/
+/*}*/
+
+
+/*a {*/
+    /*color: forestgreen;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*#resources a {*/
+    /*color: black;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*#resources a:hover {*/
+    /*color: forestgreen;*/
+    /*text-decoration: none;*/
+/*}*/
+
+/*.item {padding-bottom: 20px;*/
+/*}*/
+
+/*.panel > .panel-footer{*/
+    /*background-color: darkgreen;*/
+    /*border-bottom-style: none;*/
+/*}*/
+
+
+
+/*p{*/
+    /*margin:0 25px 10px 25px;*/
+/*}*/
+
+/*.center {*/
+    /*text-align: center;*/
+/*}*/
+
+/*.centerKey{*/
+    /*text-align: center;*/
+    /*padding-top: 50px;*/
+/*}*/
+
+/*#indexPic li {*/
+    /*display: inline-block;*/
+    /*/!*text-align: center;*!/*/
+    /*margin-left: 40px;*/
+/*}*/
+/*/!*Adjust padding on the bottom to 15 to fix the margin-bottom problem in navbar-fixed-bottom*!/*/
+/*.nav {*/
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    /*font: 30px Roboto, sans-serif;*/
+    /*font-weight: 300;*/
+    /*letter-spacing: 2px;*/
+    /*color: whitesmoke;*/
+    /*background-color: #4A2500;*/
+    /*padding: 10px 10px 15px 10px;*/
+/*}*/
+
+
+
+/*.nav-pills a {*/
+    /*color: whitesmoke;*/
+/*}*/
+
+/*/!*To get rid of white line below the nav bar set to negative margin*!/*/
+/*.navbar-fixed-bottom{*/
+    /*margin-bottom: -10px;*/
+/*}*/
+
+/*.form {*/
+    /*background-color: white;*/
+    /*border: none;*/
+/*}*/
+/*.form-control*/
+/*{*/
+    /*width: 300px;*/
+/*}*/
+
+/*.nav > li > a:hover{*/
+    /*background-color:darkgreen;*/
+/*}*/
+
+/*.btn-success{*/
+    /*background-color: forestgreen;*/
+    /*outline: 0;*/
+    /*-webkit-box-shadow: none;*/
+    /*box-shadow: none;*/
+
+/*}*/
+/*button:active,*/
+/*button:focus,*/
+/*button.active {*/
+    /*background-image: none;*/
+    /*outline: 0;*/
+    /*-webkit-box-shadow: none;*/
+    /*box-shadow: none;*/
+/*}*/
+
+
+/*.moveleft{*/
+    /*margin-left: -50px;*/
+/*}*/
+
+/*.movemoreleft {*/
+    /*margin-left:-200px;*/
+/*}*/
+
+/*#resources li{*/
+    /*text-align: left;*/
+    /*list-style-type: none;*/
+/*}*/
+
+/*#what li{*/
+    /*list-style-type: none;*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.copyright{*/
+    /*text-align: right;*/
+    /*color: darkgrey;*/
+/*}*/
+
+/*figure*/
+/*{*/
+    /*display: inline-table;*/
+    /*width:25%;*/
+    /*float:left;*/
+    /*margin:20px;*/
+    /*text-align:left;*/
+    /*padding:20px 40px 0 0;*/
+    /*font-size: 14px;*/
+/*}*/
+
+/*.figure-caption {*/
+    /*padding-top: 40px;*/
+    /*/!*font-size: 20px;*!/*/
+/*}*/
+
+/*.figure-caption1 {*/
+    /*padding-top: 90px;*/
+/*}*/
+
+/*.center1 {*/
+    /*margin-left: 17%;*/
+/*}*/
+
+/*.search{*/
+    /*text-align: center;*/
+
+/*}*/
+
+
+/*.searchitem{*/
+    /*text-align: justify;*/
+/*}*/
+/*.accordion{*/
+    /*background-color: white;*/
+    /*margin: 50px auto;*/
+/*}*/
+/*.accordion-panel{*/
+    /*display: none;*/
+/*}*/
+
+/*.accordion li {*/
+    /*padding: 50px 0 25px 0px;*/
+    /*list-style-type: none;*/
+
+/*}*/
+
+/*li .accordion-panel p:first-of-type {*/
+    /*margin-top: 50px;*/
+    /*padding-top: 50px;*/
+
+/*}*/
+
+/*li .accordion-panel p:last-of-type {*/
+    /*/!*margin-bottom: 25px;*!/*/
+/*}*/
+/*.accordion-control {*/
+    /*background-color: white;*/
+    /*color: #fff;*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*padding: 0.5em 0.5em 0.5em 40%;*/
+    /*margin: 0;*/
+    /*border-top: 1px solid forestgreen;*/
+    /*border-right: none;*/
+    /*border-left: none;*/
+    /*border-bottom: 0.5px solid forestgreen;*/
+    /*text-align: left;*/
+/*}*/
+
+/*.accordion p{*/
+    /*font-size: 20px;*/
+    /*padding-left: 30%;*/
+    /*padding-right: 30%;*/
+/*}*/
