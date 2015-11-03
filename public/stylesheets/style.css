@@ -2,7 +2,7 @@
 
 body {
   padding: 0 0 50px 0;
-  font: 14px Roboto, Helvetica, Arial, sans-serif;
+  font: 12px Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1{
@@ -91,8 +91,8 @@ p {
     letter-spacing: 2px;
     color: #4A2500;
     float: right;
-
 }
+
 
 .nav-pills a {
     color: brown;
@@ -146,11 +146,6 @@ button.active {
     display: inline-block;
 }
 
-/*.copyright{*/
-    /*text-align: right;*/
-    /*color: darkgrey;*/
-/*}*/
-
 figure
 {
     display: inline-table;
@@ -185,15 +180,16 @@ figure
 
 .accordion{
     background-color: white;
-    margin: 50px auto;
+    margin: 10px auto;
 }
 
 .accordion-panel{
     display: none;
 }
 
+/*This bottom margin affects how it shows on Firefox with the border than needs to be fixed or not shown like in Chrome and Safari*/
 .accordion li {
-    padding: 50px 0 25px 0px;
+    padding: 0px 0 5px 0px;
     list-style-type: none;
 }
 
@@ -203,7 +199,7 @@ li .accordion-panel p:first-of-type {
 }
 
 li .accordion-panel p:last-of-type {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .accordion-control {
@@ -216,12 +212,13 @@ li .accordion-panel p:last-of-type {
     border-top: 1px solid forestgreen;
     border-right: none;
     border-left: none;
-    border-bottom: 0.5px solid forestgreen;
+    /*White border fixes problem in Firefox with the border appearing above text*/
+    border-bottom: 1px solid white;
     text-align: left;
 }
 
 .accordion p{
-    font-size: 20px;
+    font-size: 14px;
     padding-left: 30%;
     padding-right: 30%;
 }
